@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="imagens/Ativo 7 1.png">
+    <title>Contato-Versímo</title>
+
+    <style>
+        .popup-caixa {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .popup-conteudo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #eeb3ff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            color: indigo;
+            text-align: center;
+            display: flex;
+        }
+
+        .imgpopup {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .fechar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .textoP {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .conteudinho {
+            margin: 20px;
+            padding: 15px;
+
+        }
+    </style>
+
+
+
+</head>
+<!-- MENU -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+            <img class="logomenu" src="Ativo 3.png" alt="logo versimo" class="logo">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Catálogo</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+
+
+    <!-- Pop-up Container -->
+    <div class="popup-caixa" id="popup">
+        <div class="popup-conteudo">
+            <span class="fechar" onclick="fecharPopup()">&times;
+            </span>
+
+            <div class="conteudinho">
+                <div class="textoP">
+                    <p>Seja Bem vindo!</p>
+                    <p>Cadastre-se e ganhe 15% off na primeira compra</p>
+                </div>
+
+                <div class="inputs">
+                    <input type="text" id="username" name="username" placeholder="E-mail:">
+                    <input type="password" id="password" name="text" placeholder="Senha:">
+                </div>
+            </div>
+
+            <div class="imgpopup">
+                <img src="ana clara (9) e 1.png" alt="" width="200px" class="imgpopup">
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        /* abrir pop-up depois de 5 seg */
+
+        setTimeout(function () {
+            abrirPopup();
+        }, 5000)
+
+        /* fechar dps de 10 seg */
+
+        setTimeout(function () {
+            fecharPopup();
+        }, 10000)
+
+
+        /*  window.onload = function () {
+             setTimeout(abrirPopup, 5000);
+         } */
+
+
+        function abrirPopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "block";
+        }
+
+        function fecharPopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "none";
+        }
+
+    </script>
+
+
+    <!-- pagina -->
+    <div class="titulo">
+        <h2>Fale Conosco</h2>
+    </div>
+
+    <div class="container">
+
+        <div class="containerInputs">
+
+
+
+            <div class="input-group">
+                <label for="username"></label>
+                <input type="text" id="username" name="username" placeholder="E-mail:">
+            </div>
+
+            <div>
+                <div class="input-group">
+                    <label for="username"></label>
+                    <input type="text" id="text" name="text" placeholder="Escreva sua Mensagem:">
+                </div>
+
+
+                <p class="inputp">Alguma Dúvida?</p>
+
+                <button type="submit">ENVIE SUA MENSAGEM</button>
+            </div>
+
+        </div>
+        <div class="localizacao">
+            <img src="localizaçao.png" alt="localização" width="300px">
+        </div>
+
+    </div>
+
+    <!-- rodapé -->
+    <footer class="rodape">
+        <img class="logomenu" src="Ativo 2.png" alt="logo versimo">
+        <img src="whatsapp.png" alt="whatsapp" width="50px">
+        <img src="instagram.png" alt="instagram" width="50px">
+        <img src="twitter.png" alt="twitter" width="50px">
+        <p>Copyright © 2023 ana | All Rights Reserved </p>
+        </class>
+        </div>
+    </footer>
+
+</body>
+
+</html>
